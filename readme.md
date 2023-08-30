@@ -6,6 +6,10 @@ The shield approach was easy because I just had to solder some male and female h
 
 I always wanted to redo this project, especially using some of the smaller ESP32 devices like the [Seeed Studio Xaio](https://www.seeedstudio.com/xiao-series-page) series of microcontrollers. A while back I was perusing the Adafruit site looking for new products when I noticed the [Adafruit 5x5 NeoPixel Grid BFF Add-On for QT Py and Xiao](https://www.adafruit.com/product/5646); it's a super tiny device, designed to attach back to back with a Seeed Xiao board. This combination gives me an opportunity to do a super small reboot of the glowing pumpkin here.
 
+Here's the project in action
+
+[![Thumbnail Image](images/thumbnail.jpg)](https://youtu.be/05cMcB_vGCM)
+
 ## Parts
 
 For this project, I used:
