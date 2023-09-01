@@ -72,7 +72,7 @@ void flicker() {
 
 // Fill the NeoPixel array with a specific color
 void fadeColor(CRGB c) {
-  for (int i = 0; i <= 25; i++) {
+  for (int i = 0; i < 25; i++) {
     leds[i] = c;
     FastLED.show();
     delay(10);
