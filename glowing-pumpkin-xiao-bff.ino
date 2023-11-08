@@ -11,6 +11,8 @@
 #include <FastLED.h>
 
 #define DEBUG true
+#define DELAY_MIN 5000
+#define DELAY_MAX 10000
 #define NUM_LEDS 25
 #define PIN A3
 
@@ -21,9 +23,9 @@ CRGB leds[NUM_LEDS];  // LED Array (internal memory structure from FastLED)
 void setup() {
   // Initialize the FastLED library
   FastLED.addLeds<NEOPIXEL, PIN>(leds, NUM_LEDS);
-  delay(500);
-  // Flash the lights RED twice
-  flashLEDs(CRGB::Red, 2, 250);
+  delay(500);  
+  // Green for GO!
+  flashLEDs(CRGB::Green, 2, 250);
 }
 
 void loop() {
@@ -34,6 +36,7 @@ void loop() {
   } else {
     // Otherwise switch to the new color
     fadeColor(colors[(int)random(1, numColors + 1)]);
+    delay((int)random(DELAY_MIN, DELAY_MAX));
   }
 }
 
@@ -76,6 +79,5 @@ void fadeColor(CRGB c) {
     leds[i] = c;
     FastLED.show();
     delay(10);
-  }
-  delay((int)random(250, 2000));
+  }  
 }
